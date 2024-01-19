@@ -1,11 +1,17 @@
 document.getElementById('newUserButton').addEventListener('click', function() {
     document.getElementById('selectuser').disabled = true;
     document.getElementById('newuser').disabled = false;
+    //scroll the page down to the new user create
+    let Section2 = document.getElementById('section2');
+    Section2.scrollIntoView({behavior:'smooth' });
 });
 
 document.getElementById('currentUserButton').addEventListener('click', function() {
     document.getElementById('selectuser').disabled = true;
     document.getElementById('currentuser').disabled = false;
+    //scroll the page down to the current user log in 
+    let Section3 = document.getElementById('section3');
+    Section3.scrollIntoView({behavior:'smooth' });
 });
 
 document.getElementById('loginButton').addEventListener('click', UserLogIn);
@@ -34,6 +40,9 @@ function createUser() {
 
     let stateDisplay = document.getElementById('statedisplay');
     stateDisplay.innerHTML = "State: "+ newState;
+
+    let Display = document.getElementById('display');
+    Display.scrollIntoView({ behavior : 'smooth'});
 }
 
 function UserLogIn() {
@@ -42,12 +51,14 @@ function UserLogIn() {
 
     var storedUsername = localStorage.getItem('username');
     var storedPassword = localStorage.getItem('password');
-
+    
     let message = document.getElementById('message');
     
     if (existingUsername === storedUsername && existingPassword === storedPassword) {
         alert("Welcome back " + existingUsername);
         message.innerHTML = "Welcome back " + existingUsername;
+        let Display = document.getElementById('display');
+        Display.scrollIntoView({ behavior : 'smooth'});
     } else {
         alert("Invalid");
         message.innerHTML = "invalid";

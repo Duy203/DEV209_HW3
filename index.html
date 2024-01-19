@@ -24,8 +24,13 @@
         <div id="section1">
             <fieldset id="selectuser" class="mb-3">
                 <legend>Please select the following options</legend><br>
-                <button id="newUserButton" class="btn btn-primary">Click for new user</button> <br>
-                <button id="currentUserButton" class="btn btn-secondary">Click for current user</button> <br>
+                
+                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                    <button type="button" class="btn btn-outline-primary" id="newUserButton" >Click for New User</button>
+                    <button type="button" class="btn btn-outline-primary" id="currentUserButton">Click for curent User</button>
+                    
+                  </div>
+                
             </fieldset>
         </div>
 
@@ -57,7 +62,7 @@
                 <label for="password" id="ExistingPassword" class="form-label">Password: </label>
                 <input type="text" id="existingPassword" required class="form-control mb-2"><br>
 
-                <button id="loginButton" class="btn btn-primary">Log In</button>
+                <button id="loginButton"class="btn btn-primary">Log In</button>
 
             </fieldset>
         </div>
@@ -65,6 +70,7 @@
         <div id="display" class="card mt-4">
             <div class="card-body">
                 <h5 class="card-title">User Information</h5>
+                <p id="usernamedisplay" class="card-text mb-2"></p>
                 <p id="message" class="card-text mb-2"></p>
                 <p id="citydisplay" class=" card-text mb-2"></p>
                 <p id="statedisplay" class="card-text mb-2"><p>
